@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    include: aws
+  devtools:
+    livereload:
+      enabled: true
+  mvc:
+    view:
+      suffix: .html
+  security:
+    user:
+      name: user
+      password: user1234
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+# SQL Parameter(?) ? ??
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
